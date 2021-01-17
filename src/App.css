@@ -1,38 +1,281 @@
-.App {
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* navbar */
+
+.bg-light {
+  background-image: linear-gradient(to left, #4ed92b 0%, #45cc2e 100%);
+}
+.navbar-light .navbar-brand {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(241, 241, 241, 0.7);
+}
+
+/* button */
+
+.custom-btn {
+  margin-top: 30px;
+  display: block;
+}
+.custom-btn a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 45px;
+  border-radius: 50px;
+  background-image: linear-gradient(to top, #51cc1f 0%, #48ec3d 100%);
+  border: 2px solid #48ec3d;
+}
+.custom-btn a:hover {
+  background-image: none;
+}
+
+/* footer */
+
+.ft-txt {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+/* Home Page */
+
+.hm-box {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  overflow: hidden;
+}
+.no-box-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.hm-box-left {
+  overflow: hidden;
+}
+.hm-box-left img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50vh solid #222222;
+  border-left: 100px solid transparent;
+  border-bottom: 50vh solid #222222;
+  position: absolute;
+  right: 15px;
+  z-index: 50;
+}
+.hm-box-right {
+  color: #fff;
+  text-align: justify;
+  margin-right: 105px;
+  margin-top: 25vh;
+  padding-left: 30px;
+}
+.hm-box-overlay-right {
+  background-color: rgba(0, 0, 0, 0.38);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15px;
+  z-index: 0;
+}
+
+.hm-box-right p {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.hm-box-right h4 {
+  font-weight: 100;
+}
+
+/* Login Page */
+
+.login-box {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  padding: 50px;
+  border-radius: 6px;
+}
+.login-box-bg {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 100px;
+  height: 100vh;
+}
+label {
+  color: #fff;
+}
+.login-box-heading h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-btn {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.login-reg-link {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-reg-link a {
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sign UP Page */
+
+/* .signup-right-overlay {
+  left: 15px;
+  right: 0;
+}
+.signup-right {
+  border-right: 100px solid transparent;
+  border-left: 0 solid transparent;
+  left: 15px;
+} */
+.signup-main {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to leftt,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 80px 0px;
+}
+.Signup-box {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  width: 60%;
+  padding: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  margin-top: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Signup-box-heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.signup-right-box {
+  text-align: left;
+  margin-left: 105px;
+  margin-right: 0;
+  margin-top: 10vh;
+}
+.signup-right-box p {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.signup-right-box ul {
+  padding-top: 20px;
+}
+.signup-right-box li {
+  font-weight: 200;
+  font-size: 24px;
+  list-style: decimal-leading-zero;
+}
+
+/* Dashboard */
+.sidebar-box {
+  display: inline-block;
+  float: left;
+  background-color: #2f3944;
+  width: 20%;
+  height: 300vh;
+}
+.topbar-box {
+  height: 50px;
+  background-color: #f7f8f8;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.table {
+  width: 80%;
+}
+.sidebar-box-title {
+  color: #fff;
+  padding: 12px 20px;
+}
+.sidebar-box ul {
+  padding: 0px 8px;
+  list-style: none;
+}
+.sidebar-box ul li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #585656;
+}
+.sidebar-box ul li a {
+  color: #fff;
+}
+.topbar-box-search {
+  display: inline-block;
+  padding: 6px 53px;
+}
+.topbar-box-icons {
+  display: inline-block;
+  float: right;
+  padding: 13px 40px 9px 20px;
+}
+.topbar-box-icons i {
+  font-size: 25px;
+  color: #76818e;
+  padding-right: 15px;
+}
+.panel-body-heading {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 36px 12px 0px 25px;
 }
 
-.App-link {
-  color: #61dafb;
+/* shoe */
+.ft-strick-chart {
+  display: inline-block;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ft-strick {
+  padding: 25px;
 }
